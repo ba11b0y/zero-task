@@ -4,6 +4,8 @@ import redis
 
 redis_conn = redis.from_url(os.environ.get("REDIS_URL"))
 
+GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google-chrome'
+CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 
 conf = {
     '/static': {

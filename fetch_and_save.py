@@ -12,12 +12,14 @@ def fetch_link():
     It uses a headless chrome instance t
     """
     from selenium import webdriver
+    from conf import GOOGLE_CHROME_PATH, CHROMEDRIVER_PATH
 
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
+    chrome_options.binary_location = GOOGLE_CHROME_PATH
     driver = webdriver.Chrome(
-        executable_path='./chromedriver', options=chrome_options)
+        executable_path=CHROMEDRIVER_PATH, options=chrome_options)
 
     LINK_XPATH = '//*[(@id = "ContentPlaceHolder1_btnhylZip")]'
 
