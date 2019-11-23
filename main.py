@@ -48,7 +48,6 @@ class Root(object):
 
 if __name__ == "__main__":
 
-    cherrypy.tree.mount(SearchService(), '/search')
     cherrypy.tree.mount(Root(), '/', conf)
     cherrypy.tree.mount(ScripDetails(), '/details',
                         {'/':
@@ -60,6 +59,11 @@ if __name__ == "__main__":
                          {'request.dispatch': cherrypy.dispatch.MethodDispatcher()}
                          }
                         )
+    cherrypy.tree.mount(SearchService(), '/search',
+                        {'/':
+                         {'request.dispatch': cherrypy.dispatch.MethodDispatcher(
+                         )}
+                         })
     cherrypy.config.update(
         {'server.socket_host': '0.0.0.0', 'server.socket_port': int(os.environ.get('PORT', 443))})
     cherrypy.engine.start()
