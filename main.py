@@ -7,9 +7,10 @@ import os
 
 class SearchService(object):
 
-    @cherrypy.expose
+    exposed = True
+
     @cherrypy.tools.json_out()
-    def index(self, query):
+    def GET(self, query):
         results = search_by_name(query)
         return {"res": results}
 
@@ -61,8 +62,7 @@ if __name__ == "__main__":
                         )
     cherrypy.tree.mount(SearchService(), '/search',
                         {'/':
-                         {'request.dispatch': cherrypy.dispatch.MethodDispatcher(
-                         )}
+                         {'request.dispatch': cherrypy.dispatch.MethodDispatcher()}
                          })
     cherrypy.config.update(
         {'server.socket_host': '0.0.0.0', 'server.socket_port': int(os.environ.get('PORT', 443))})

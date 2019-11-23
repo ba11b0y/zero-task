@@ -13,7 +13,7 @@ function f(element) {
     console.log(element);
     $(".results").empty();
     $.ajax({
-        url: `//${window.location.hostname}/details?scrip_name=` + element,
+        url: `https://${window.location.hostname}/details?scrip_name=` + element,
         type: 'GET',
         dataType: 'json',
         success: function (result) {
@@ -45,7 +45,6 @@ const makeInitTable = () => {
     $.ajax({
         type: 'GET',
         url: `https://${window.location.hostname}/fetch`,
-        type: 'GET',
         dataType: 'json',
         success: function (results) {
 
@@ -84,7 +83,7 @@ $(document).ready(() => {
         $(".details-table").hide();
 
         $.ajax({
-            url: `//${window.location.hostname}/search?query=` + query,
+            url: `https://${window.location.hostname}/search?query=` + query,
             type: 'GET',
             dataType: 'json',
             success: function (result) {
