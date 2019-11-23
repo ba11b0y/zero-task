@@ -2,7 +2,7 @@ import os
 import cherrypy
 import redis
 
-redis_conn = redis.Redis(host='172.23.0.2', port=6379)
+redis_conn = redis.from_url(os.environ.get("REDIS_URL"))
 
 
 conf = {
