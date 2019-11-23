@@ -2,6 +2,7 @@ import cherrypy
 from conf import conf, redis_conn
 from redis_helpers import search_by_name, get_scrip_details, order_by_num_of_trades, parse_csv_and_seed
 from fetch_and_save import convert_helper
+import os
 
 
 class SearchService(object):
@@ -60,6 +61,6 @@ if __name__ == "__main__":
                          }
                         )
     cherrypy.config.update(
-        {'server.socket_host': '0.0.0.0', 'server.socket_port': 8080})
+        {'server.socket_host': '0.0.0.0', 'server.socket_port': int(os.environ.get('PORT', 8080))})
     cherrypy.engine.start()
     cherrypy.engine.block()
