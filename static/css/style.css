@@ -1,0 +1,236 @@
+body {
+  background: #1F2739;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* 
+** Search Field Styling 
+**/
+
+fieldset {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 40px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+input,
+button {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  display: inline-block;
+  float: left;
+}
+
+input {
+  color: #000;
+  font-size: 24px;
+  z-index: 2;
+  border: 0 none;
+}
+input:focus {
+  outline: 0 none;
+}
+input:focus + button {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+button {
+  z-index: 1;
+  width: 50px;
+  border: 0 none;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;  
+  -webkit-transform: translate(-50px, 0);
+      -ms-transform: translate(-50px, 0);
+          transform: translate(-50px, 0);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.fa-search {
+  font-size: 1.4rem;
+  color: #000;
+  z-index: 3;
+  top: 25%;
+  -webkit-transform: translate(-190px, 0);
+      -ms-transform: translate(-190px, 0);
+          transform: translate(-190px, 0);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
+}
+
+
+/*
+** Additional Styling for Searchbar 
+**/
+
+.top-searchbar {
+  height: 100px;
+  width: 300px;
+  margin: 50px auto;
+  max-width: 500px;
+}
+
+.centered-searchbar {
+  height: 100px;
+  width: 300px;
+    margin: auto;
+}
+
+/*
+** Search Results 
+**/
+
+.results-container{
+  margin-top: -40px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li div {
+  background: #fff;
+  max-width: 200px;
+  padding: 15px;
+  margin: 10px auto;
+  box-shadow: -1px 1px 5px #666;
+  border-radius: 10px;
+  border-left: 8px solid #fff;
+  transition: border .2s ease-in-out;
+  text-align: center;
+  color: #000;
+}
+
+li div:hover {
+  cursor: pointer;
+  border-left: 8px solid #ff5722;
+}
+
+li div h2 {
+  color: #333;
+  font-size: 22px;
+}
+
+li div p {
+  margin-left: 20px;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+
+
+/* Table Styling */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+ 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color:#A7A1AE;
+  background-color:#1F2739;
+}
+
+h1 {
+  font-size:3em; 
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  color: #4DC3FA;
+}
+
+h2 {
+  font-size:1em; 
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 2em;
+  color: #FB667A;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FB667A;
+  text-decoration: none;
+}
+
+.blue { color: #185875; }
+.yellow { color: #FFF842; }
+
+.details-table th h1 {
+    font-weight: bold;
+    font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.details-table td {
+    font-weight: normal;
+    font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+          box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.details-table {
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.details-table td, .details-table th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+  padding-left:2%;  
+}
+
+.details-table th {
+    background-color: #1F2739;
+}
+
+.details-table td:first-child { color: #FB667A; }
+
+.details-table tr:hover {
+  background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+          box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.details-table td:hover {
+  background-color: #FFF842;
+  color: #403E10;
+  font-weight: bold;
+  
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  
+  transition-delay: 0s;
+    transition-duration: 0s.4s;
+    transition-property: all;
+  transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+.details-table td:nth-child(4),
+.details-table th:nth-child(4) { display: none; }
+}

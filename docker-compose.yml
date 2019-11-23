@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  redis:
+    image: redislabs/redis-py
+    restart: always
+    ports:
+      - 6379:6379
+    networks: 
+      - zero
+  web:
+    build: .
+    ports:
+      - 8080:8080
+    networks: 
+      - zero
+    depends_on:
+      - redis
+    
+networks: 
+  zero:
