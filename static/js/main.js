@@ -13,7 +13,7 @@ function f(element) {
     console.log(element);
     $(".results").empty();
     $.ajax({
-        url: `https://${window.location.hostname}/details?scrip_name=` + element,
+        url: `//${window.location.hostname}/details?scrip_name=` + element,
         type: 'GET',
         dataType: 'json',
         success: function (result) {
@@ -84,7 +84,7 @@ $(document).ready(() => {
         $(".details-table").hide();
 
         $.ajax({
-            url: `https://${window.location.hostname}/search?query=` + query,
+            url: `//${window.location.hostname}/search?query=` + query,
             type: 'GET',
             dataType: 'json',
             success: function (result) {
