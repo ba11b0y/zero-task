@@ -17,7 +17,7 @@ def fetch_link():
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     driver = webdriver.Chrome(
-        executable_path='chromedriver', options=chrome_options)
+        executable_path='./chromedriver', options=chrome_options)
 
     LINK_XPATH = '//*[(@id = "ContentPlaceHolder1_btnhylZip")]'
 
